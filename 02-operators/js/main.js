@@ -117,6 +117,7 @@ Ejercicio 5:
     - mandar el mensaje -> "Ambos string son iguales"
 */
 
+
 // declaracion
 function compareStrings(string1, string2) {
     let lengthString1 = string1.length
@@ -142,6 +143,22 @@ Ejercicio 6:
     input: 'Programación Javascript'
     Output: 'Programación'
 */
+
+function compareStringsTwo(string1,string2){
+   
+    let DistanciaString1 =string1.length
+    let DistanciaString2 = string2.length
+
+    if(DistanciaString1 > DistanciaString2) {
+        return "Programación"
+    }else if(DistanciaString1 < DistanciaString2) {
+        return "Javascript"
+    }else {
+        return "Ambos son iguales"
+    }
+}
+
+console.log(compareStringsTwo("Programación,Javascript"))
 /*
 let stringfrase = prompt("introduce un string de dos palabras")
 
@@ -231,7 +248,22 @@ output: "A VeRy lArGe sTrInG"
 input: "abcdefg"
 output: "AbCdEfG"
 */
+ 
+let str = "kodemia"
+let lengthStr = str.length
 
+let result = ""
+
+for (let index = 0;index<lengthStr; index++ ){
+    if (index %2 === 0 ) {
+        result+= str.charAt(index).toUpperCase()
+    } else{
+        result+= str.charAt(index).toLowerCase()
+    }
+}
+
+console.log(`Input: `, str)
+console.log(`Output: ` ,result)
 /*
 Crear una funcion que me indique si un string comienza con
  -una vocal
@@ -239,3 +271,4 @@ Crear una funcion que me indique si un string comienza con
  -numero
  -caracter especial
 */
+// supongo que es el mismo metodo de arriba y tambien supongo que es como le hicieron con regexp
